@@ -1,0 +1,20 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.CellBiologyMapkSignalingTheoremCanonicalLaneLean.CellSignalingReceptorPackage
+import HautevilleHouse.CellBiologyMapkSignalingTheoremCanonicalLaneLean.RasGtpCycle
+import HautevilleHouse.CellBiologyMapkSignalingTheoremCanonicalLaneLean.MapkPhosphorylationCascade
+import HautevilleHouse.CellBiologyMapkSignalingTheoremCanonicalLaneLean.GeneExpressionRegulation
+import HautevilleHouse.CellBiologyMapkSignalingTheoremCanonicalLaneLean.ScaffoldProteinComplex
+import HautevilleHouse.CellBiologyMapkSignalingTheoremCanonicalLaneLean.NegativeFeedbackRegulation
+
+namespace HautevilleHouse
+namespace CellBiologyMapkSignalingTheoremCanonicalLaneLean
+
+def ConstrainedMapkSignalingClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_mapk_signaling_endgame (A : AdmissibleClass) :
+    ConstrainedMapkSignalingClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end CellBiologyMapkSignalingTheoremCanonicalLaneLean
+end HautevilleHouse
